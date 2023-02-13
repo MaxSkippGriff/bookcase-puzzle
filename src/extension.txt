@@ -1,0 +1,17 @@
+Extension:
+-----------
+For my extension I aimed to improve the efficiency of the bookcase program by using
+two functions, 'repeated_bc' and 'destroy_bc'. Together these functions destroy repeated
+bookcases to prevent repeated bookcases been added to the list of bookcases. These
+functions are very useful for reducing the growth of bookcases and therefore serve
+to improve the overall efficiency of the program.
+
+Both of these functions, 'repeated_bc' and 'destroy_bc' are in the bookcase.c and extension.c files. However in the bookcase.c program the repeated bookcases are identified but not destroyed whereas in the extension.c program they are both identified and destroyed. As such, the speed of the extension.c program is faster than the bookcase.c file.
+
+How the functions work in extension.c:
+---------------------------------------
+The function 'repeated_bc' is called inside the the 'solve' function. The former is
+passed the next_leaf, array_master and length_master and checks whether there
+is a repeat bookcase. If there is, it returns true, and if there is not, it returns
+false. The result is then checked in the solve_problem function and in the event of
+a repeated bookcase the bookcase is destroyed in the 'destroy_bc' function.
